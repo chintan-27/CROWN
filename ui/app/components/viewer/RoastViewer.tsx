@@ -10,14 +10,6 @@ import { cn } from "@/lib/utils";
 
 const PANELS = [
   {
-    type: "emag",
-    label: "E-field Magnitude",
-    unit: "V/m",
-    description: "Electric field intensity in tissue",
-    recommended: true,
-    note: null,
-  },
-  {
     type: "jbrain",
     label: "Current Density (Brain)",
     unit: "A/m²",
@@ -26,12 +18,20 @@ const PANELS = [
     note: "J-map for brain tissue only. Shows how much current reaches cortical and subcortical regions.",
   },
   {
+    type: "emag",
+    label: "E-field Magnitude",
+    unit: "V/m",
+    description: "Electric field intensity in tissue",
+    recommended: true,
+    note: null,
+  },
+  {
     type: "voltage",
     label: "Voltage",
     unit: "mV",
     description: "Electric potential distribution",
     recommended: false,
-    note: "Voltage appears nearly uniform inside brain tissue — the skull (high resistance) absorbs most of the potential drop. Use E-field Magnitude above to assess stimulation strength in the brain.",
+    note: "Voltage appears nearly uniform inside brain tissue — the skull (high resistance) absorbs most of the potential drop. Use the E-field Magnitude panel to assess stimulation strength in the brain.",
   },
 ] as const;
 
